@@ -1,0 +1,8 @@
+{
+  "gameId": "",
+  "players": [],
+  "currentPlayerIndex": 0,
+  "turnNumber": 1,
+  "gamePhase": "LOBBY",
+  "tiles": []
+}
