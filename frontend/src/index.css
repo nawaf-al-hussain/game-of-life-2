@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f4f6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.game-board {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.player-token {
+  transition: all 0.3s ease;
+}
+
+.tile-hover:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* Phase 10: Tile Landing Banner & Payday animations */
+@keyframes float-up {
+  0%   { transform: translateY(0) scale(1) rotate(0deg);   opacity: 1; }
+  100% { transform: translateY(-95vh) scale(0.4) rotate(25deg); opacity: 0; }
+}
+.animate-float-up {
+  animation: float-up 2s ease-out forwards;
+}
+
+@keyframes bounce-once {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-18px); }
+}
+.animate-bounce-once {
+  animation: bounce-once 0.6s ease-out 1;
+}
+
+/* Slide-up transition for the landing banner (supplement Tailwind) */
+.translate-y-full {
+  transform: translateY(100%);
+}
+.duration-350 {
+  transition-duration: 350ms;
+}
